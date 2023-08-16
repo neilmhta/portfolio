@@ -15,6 +15,20 @@ header {
   padding: 10px;
 }
 
+#home-wrap{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+@media (min-width: 769px) {
+  #intro {
+    width: 300px;
+  }
+}
+
+
 footer{
   display: flex;
   flex-direction: column;
