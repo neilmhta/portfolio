@@ -1,0 +1,111 @@
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'Inconsolata', monospace;
+  line-height: 1.6;
+  background-color: #eef2e4;
+}
+
+header {
+  color: #000;
+  padding: 10px;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+section {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+/* portfolio styles */ 
+/* Your existing styles */
+
+/* Common style for research and article items */
+.portfolio-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the items horizontally */
+  margin: -10px; /* To offset padding of individual items */
+}
+
+.portfolio-content {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+.portfolio-content img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Desktop: Boxes in rows */
+@media (min-width: 769px) {
+  .portfolio-content {
+    flex-basis: calc(33.33% - 20px); /* 3 items per row */
+  }
+}
+
+/* Mobile: Boxes stack along a single column */
+@media (max-width: 768px) {
+  .portfolio-content {
+    flex-basis: calc(50% - 20px); /* 2 items per column */
+  }
+}
+
+/* animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeIn 0.9s ease-in-out;
+}
